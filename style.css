@@ -5,6 +5,7 @@
     --dark-blue: hsl(230, 35%, 7%);
     --light-blue: hsl(231, 77%, 90%);
     --white: hsl(0, 0%, 100%);
+    --blur: hsla(0, 0%, 100%, 0.4);
 
     /* font-sizes */
     --14px: 0.875rem;

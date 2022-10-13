@@ -9,6 +9,7 @@ The first thing was setting up the project. This involved:
 
 ## Initial Gameplan
 - Mobile-first design. It makes a lot more sense to me to build up to the desktop version than vice versa.
+- Define components and look for repeated patterns. 
 - I have been wanting to explore Cube CSS methodology created by Andy Bell (see [Resources](#resources)). The best way to explore something like this is to apply it and so that's the plan. 
 
 ## The Challenges 
