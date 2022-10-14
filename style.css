@@ -1,11 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+/* ######################### */
+/* CUSTOM PROPERTIES ####### */
+/* ######################### */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
 
 :root {
     /* colors */
-    --dark-blue: hsl(230, 35%, 7%);
-    --light-blue: hsl(231, 77%, 90%);
-    --white: hsl(0, 0%, 100%);
-    --blur: hsla(0, 0%, 100%, 0.4);
+    --dark-blue: 230 35% 7%;
+    --light-blue: 231 77% 90%;
+    --white: 0 0% 100%;
+    --blur: 0 0% 100%;
 
     /* font-sizes */
     --14px: 0.875rem;
@@ -16,7 +20,16 @@
     --56px: 3.5rem;
     --100px: 6.25rem;
     --150px: 9.375rem;
+
+    /* font-families */
+    --serif: "Bellefair", serif;
+    --sans-serif-condensed: "Barlow Condensed", sans-serif;
+    --sans-serif-normal: "Barlow", sans-serif;
 }
+
+/* ######################### */
+/* RESET ################### */
+/* ######################### */
 
 *,
 *::before,
@@ -27,12 +40,8 @@
     padding: 0;
 }
 
-html, body {
-    height: 100%;
-}
-
-html:focus-within {
-    scroll-behavior: smooth;
+body {
+    min-height: 100vh;
 }
 
 body {
@@ -70,95 +79,70 @@ select {
     }
 }
 
-ol, ul {
-    list-style: none;
+/* ######################### */
+/* Utility Classes ######### */
+/* ######################### */
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.container {
+    padding: 0px 16px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+}
+
+.screen-reader-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
     padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip:rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
-h1, 
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-    overflow-wrap: break-word;
-    max-width: 65ch;
-}
+/* ######################### */
+/* COLORS ################## */
+/* ######################### */
 
-a {
-    display: block;
-    text-decoration: none;
-}
+.bg-dark-blue { background-color: hsl(var(--dark-blue)); }
+.bg-light-blue { background-color: hsl(var(--light-blue)); }
+.bg-white { background-color: hsl(var(--white)); }
 
-p a {
-    display: inline;
-    text-decoration: underline;
-}
+.text-dark-blue { color: hsl(var(--dark-blue)); }
+.text-light-blue { color: hsl(var(--light-blue)); }
+.text-white { color: hsl(var(--white)); }
 
+/* ######################### */
+/* TYPE #################### */
+/* ######################### */
 
+.serif { font-family: var(--serif); }
+.sans-normal { font-family: var(--sans-serif-normal); }
+.sans-condensed { font-family: var(--sans-serif-condensed); }
 
+.ls-lg { letter-spacing: 0.3rem; }
+.ls-md { letter-spacing: 0.17rem; }
+.ls-sm { letter-spacing: 0.15rem; }
 
+.uppercase { text-transform: uppercase; }
 
-/* STYLE SETUP ############# */
-
-h1,
-h2,
-h3,
-h4,
-.sub-heading-1 {
-    font-family: 'Bellefair', serif; 
-    color: var(--white);
-}
-
-.sub-heading-2,
-.nav-text,
-p,
-a {
-    font-family: 'Barlow Condensed', sans-serif;
-    color: var(--white);
-}
-
-h1 {
-    font-size: var(--150px);
-
-}
-
-h2 {
-    font-size: var(--100px);
-}
-
-h3 {
-    font-size: var(--56px);
-}
-
-h4 {
-    font-size: var(--32px);
-}
-
-h5 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: var(--28px);
-    letter-spacing: 0.29rem;
-    color: var(--light-blue)
-}
-
-.sub-heading-1 {
-    font-size: var(--28px);
-}
-
-.sub-heading-2 {
-    font-size: var(--14px);
-    letter-spacing: 0.15rem;
-}
-
-.nav-text {
-    font-size: var(--16px);
-    letter-spacing: 0.17rem;
-}
-
-p {
-    font-size: var(--18px);
-}
-
-
+.fs-150px { font-size: var(--150px); }
+.fs-100px { font-size: var(--100px); }
+.fs-56px { font-size: var(--56px); }
+.fs-32px { font-size: var(--32px); }
+.fs-28px { font-size: var(--28px); }
+.fs-18px { font-size: var(--18px); }
+.fs-16px { font-size: var(--16px); }
+.fs-14px { font-size: var(--14px); }
