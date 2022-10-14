@@ -2,8 +2,6 @@
 /* CUSTOM PROPERTIES ####### */
 /* ######################### */
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
-
 :root {
     /* colors */
     --dark-blue: 230 35% 7%;
@@ -22,10 +20,15 @@
     --150px: 9.375rem;
 
     /* font-families */
-    --serif: "Bellefair", serif;
-    --sans-serif-condensed: "Barlow Condensed", sans-serif;
-    --sans-serif-normal: "Barlow", sans-serif;
+    --ff-serif: "Bellefair", serif;
+    --ff-sans-serif-condensed: "Barlow Condensed", sans-serif;
+    --ff-sans-serif-normal: "Barlow", sans-serif;
 }
+
+
+
+
+
 
 /* ######################### */
 /* RESET ################### */
@@ -48,7 +51,9 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeSpeed;
-    background-color: var(--dark-blue);
+    background-color: hsl(var(--dark-blue));
+    font-family: var(--ff-sans-serif-normal);
+    color: hsl(var(--white));
 }
 
 img,
@@ -78,6 +83,11 @@ select {
         scroll-behavior: auto !important;
     }
 }
+
+
+
+
+
 
 /* ######################### */
 /* Utility Classes ######### */
@@ -112,6 +122,11 @@ select {
     border: 0;
 }
 
+
+
+
+
+
 /* ######################### */
 /* COLORS ################## */
 /* ######################### */
@@ -124,13 +139,18 @@ select {
 .text-light-blue { color: hsl(var(--light-blue)); }
 .text-white { color: hsl(var(--white)); }
 
+
+
+
+
+
 /* ######################### */
 /* TYPE #################### */
 /* ######################### */
 
-.serif { font-family: var(--serif); }
-.sans-normal { font-family: var(--sans-serif-normal); }
-.sans-condensed { font-family: var(--sans-serif-condensed); }
+.serif { font-family: var(--ff-serif); }
+.sans-normal { font-family: var(--ff-sans-serif-normal); }
+.sans-condensed { font-family: var(--ff-sans-serif-condensed); }
 
 .ls-lg { letter-spacing: 0.3rem; }
 .ls-md { letter-spacing: 0.17rem; }
@@ -138,11 +158,24 @@ select {
 
 .uppercase { text-transform: uppercase; }
 
-.fs-150px { font-size: var(--150px); }
-.fs-100px { font-size: var(--100px); }
-.fs-56px { font-size: var(--56px); }
-.fs-32px { font-size: var(--32px); }
-.fs-28px { font-size: var(--28px); }
-.fs-18px { font-size: var(--18px); }
-.fs-16px { font-size: var(--16px); }
-.fs-14px { font-size: var(--14px); }
+.fs-900 { font-size: var(--150px); }
+.fs-800 { font-size: var(--100px); }
+.fs-700 { font-size: var(--56px); }
+.fs-600 { font-size: var(--32px); }
+.fs-500 { font-size: var(--28px); }
+.fs-400 { font-size: var(--18px); }
+.fs-300 { font-size: var(--16px); }
+.fs-200 { font-size: var(--14px); }
+
+
+
+
+
+/* ######################### */
+/* GLOBAL STYLES ########### */
+/* ######################### */
+
+.global-header {
+    justify-content: space-between;
+    padding-block: 64px;
+}
