@@ -13,6 +13,7 @@
     --14px: 0.875rem;
     --16px: 1rem;
     --18px: 1.125rem;
+    --24px: 1.5rem;
     --28px: 1.75rem;
     --32px: 2rem;
     --56px: 3.5rem;
@@ -23,6 +24,11 @@
     --ff-serif: "Bellefair", serif;
     --ff-sans-serif-condensed: "Barlow Condensed", sans-serif;
     --ff-sans-serif-normal: "Barlow", sans-serif;
+
+    /* letter-spacing */
+    --ls-lg: 0.3rem; 
+    --ls-md: 0.17rem;
+    --ls-sm: 0.15rem;
 }
 
 
@@ -44,15 +50,13 @@
 }
 
 body {
-    min-height: 100vh;
-}
-
-body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeSpeed;
+    min-height: 100vh;
     background-color: hsl(var(--dark-blue));
     font-family: var(--ff-sans-serif-normal);
+    font-size: var(--18px);
     color: hsl(var(--white));
 }
 
@@ -171,11 +175,13 @@ select {
 
 
 
+
 /* ######################### */
 /* GLOBAL STYLES ########### */
 /* ######################### */
 
 .global-header {
     justify-content: space-between;
+    align-items: center;
     padding-block: 64px;
 }

@@ -1,0 +1,30 @@
+.design-system-header h1 {
+    font-size: var(--24px);
+    color: hsl(var(--light-blue));
+    font-family: var(--ff-sans-serif-condensed);
+    font-weight: 100;
+}
+
+section h2 {
+    font-size: var(--28px);
+    font-weight: 100;
+    letter-spacing: var(--ls-lg);
+    margin-bottom: 1em;
+}
+
+section h2 span {
+    margin-right: 0.8em;
+    color: hsl(var(--light-blue));
+}
+
+.color-card .color-swatch {
+    font-size: var(--24px);
+    padding: 3rem 1rem 1rem;
+    border: 1px solid hsl(var(--white));
+    margin-bottom: 1em;
+}
+
+.color-card span {
+    color: hsl(var(--light-blue));
+    margin-right: 1.5em;
+}
