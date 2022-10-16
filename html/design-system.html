@@ -29,7 +29,7 @@
         <h1 class="uppercase ls-lg">Design System</h1>
     </header>
 
-    <section id="colors">
+    <!-- <section id="colors">
         <h2 class="numbered-title"><span>01</span>colors</h2>
 
         <div class="flex">
@@ -119,10 +119,58 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <section id="interactions">
+    <section id="interactions" class="flow">
         <h2 class="numbered-title"><span>03</span>interactive elements</h2>
+
+        <div class="nav-wrapper flow" style="--flow-space: 1rem;">
+            <nav class="bg-faded flex">
+                <a class="nav-item" href="#"><span>00</span>Active</a>
+                <a class="nav-item" href="#"><span>01</span>Hovered</a>
+                <a class="nav-item" href="#"><span>02</span>Idle</a>
+            </nav>
+            <p class="text-light-blue center">Different States of Navigation Bar</p>
+        </div>
+
+        <div class="flex flex-options" style="--gap: 4rem;">
+            <div class="main-buttons-container flow" style="--flow-space: 4rem;">
+                <div class="main-button-wrapper flow" style="--flow-space: 1rem;">
+                    <button class="main-button idle">explore</button>
+                    <p class="text-light-blue center" >Landing Page Main Button - Idle</p>
+                </div>
+                <div class="main-button-wrapper flow">
+                    <button class="main-button active">explore</button>
+                    <p class="text-light-blue center" style="--flow-space: 1rem;">Landing Page Main Button - Active</p>
+                </div>
+            </div>
+            <div class="flow" style="--flow-space: 4rem;">
+                <div class="tabs-wrapper flow">
+                    <nav>
+                        <a class="nav-item" href="#">Moon</a>
+                        <a class="nav-item" href="#">Mars</a>
+                        <a class="nav-item" href="#">Europa</a>
+                    </nav>
+                    <p class="text-light-blue center" style="--flow-space: 1rem;">Tabs (Active, Hover, & Idle)</p>
+                </div>
+                <div class="slider-1-wrapper flow">
+                    <nav>
+                        <div class="dot active"></div>
+                        <div class="dot hover"></div>
+                        <div class="dot"></div>
+                    </nav>
+                    <p class="text-light-blue center" style="--flow-space: 1rem;">Slider 1 States (Active, Hover, & Idle)</p>
+                </div>
+                <div class="slider-2-wrapper flow">
+                    <nav class="flow" style="--flow-space: 1rem;">
+                        <a class="number-slider active" href="#">1</a>
+                        <a class="number-slider hover" href="#">2</a>
+                        <a class="number-slider idle" href="#">3</a>
+                    </nav>
+                    <p class="text-light-blue center" style="--flow-space: 1rem;">Slider 2 States (Active, Hover, & Idle)</p>
+                </div>
+            </div>
+        </div>
     </section>
 </div>
 

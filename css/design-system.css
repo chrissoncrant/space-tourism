@@ -53,3 +53,146 @@ section h3 {
 #typography .heading {
     line-height: 1;
 }
+
+
+
+
+
+/* ########################## */
+/* INTERACTIONS ############# */
+/* ########################## */
+
+#interactions .flex-options {
+    justify-content: center;
+}
+
+/* NAVIGATION */
+.nav-wrapper nav {
+    --gap: 9rem;
+    justify-content: center;
+}
+
+.nav-item {
+    padding-block: 1rem;
+    text-decoration: none;
+    color: inherit;
+    font-size: var(--16px);
+    text-transform: uppercase;
+    font-family: var(--ff-sans-serif-condensed);
+    letter-spacing: var(--ls-md);
+}
+
+.nav-item:first-child {
+    border-bottom: 2px solid hsl(var(--white));
+}
+
+.nav-item:nth-of-type(2) {
+    border-bottom: 2px solid hsl(var(--white) / 0.5);
+}
+
+.nav-item span {
+    font-weight: 700;
+    margin-right: 0.8em;
+}
+
+.nav-item:hover {
+    border-bottom: 2px solid hsl(var(--white) / 0.5);
+}
+
+.nav-item:active {
+    border-bottom: 2px solid hsl(var(--white));
+}
+
+/* MAIN BUTTON */
+
+.main-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-button-wrapper {
+    width: fit-content;
+}
+
+.main-button {
+    box-sizing: content-box;
+    background-color: white;
+    color: hsl(var(--dark-blue));
+    text-transform: uppercase;
+    width: 274px;
+    height: 274px;
+    border: 88px solid hsl(var(--dark-blue));
+    border-radius: 50%;
+    font-size: var(--32px);
+}
+
+.main-button.idle {
+    border: none;
+}
+
+.main-button.active {
+    border-color: rgb(28, 27, 27);
+}
+
+/* TAB */
+.tabs-wrapper nav {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+/* SLIDER 1 */
+
+.slider-1-wrapper nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    background-color:hsl(var(--white) / 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color:hsl(var(--white));
+}
+
+.dot.hover {
+    background-color:hsl(var(--white) / 0.5);
+}
+
+/* SLIDER 1 */
+.slider-2-wrapper nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.number-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    border: 1px solid hsl(var(--white) / 0.2);
+    font-family: var(--ff-serif);
+    font-size: var(--32px);
+    text-decoration: none;
+    color: hsl(var(--white));
+    border-radius: 50%;
+}
+
+.number-slider.hover {
+    border-color: hsl(var(--white));
+}
+
+.number-slider.active {
+    border-color: hsl(var(--white));
+    background-color: hsl(var(--white));
+    color: hsl(var(--dark-blue));
+}

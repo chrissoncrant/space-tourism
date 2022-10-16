@@ -145,6 +145,8 @@ select {
 .bg-dark-blue { background-color: hsl(var(--dark-blue)); }
 .bg-light-blue { background-color: hsl(var(--light-blue)); }
 .bg-white { background-color: hsl(var(--white)); }
+.bg-faded { background-color: hsl(var(--white) / 0.04); }
+
 
 .text-dark-blue { color: hsl(var(--dark-blue)); }
 .text-light-blue { color: hsl(var(--light-blue)); }
@@ -178,6 +180,8 @@ select {
 .fs-400 { font-size: var(--18px); }
 .fs-300 { font-size: var(--16px); }
 .fs-200 { font-size: var(--14px); }
+
+.center { text-align: center; }
 
 
 .numbered-title {
