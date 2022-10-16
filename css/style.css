@@ -29,6 +29,9 @@
     --ls-lg: 0.3rem; 
     --ls-md: 0.17rem;
     --ls-sm: 0.15rem;
+
+    /* spacing */
+    --flow-space: 3rem;
 }
 
 
@@ -107,6 +110,10 @@ select {
     gap: var(--gap, 1rem);
 }
 
+.flow > * + * {
+    margin-top: var(--flow-space, 3rem);
+}
+
 .container {
     padding: 0px 16px;
     margin-left: auto;
@@ -141,6 +148,7 @@ select {
 
 .text-dark-blue { color: hsl(var(--dark-blue)); }
 .text-light-blue { color: hsl(var(--light-blue)); }
+.text-faded { color: hsl(var(--light-blue) / 0.5)}
 .text-white { color: hsl(var(--white)); }
 
 
@@ -172,7 +180,20 @@ select {
 .fs-200 { font-size: var(--14px); }
 
 
+.numbered-title {
+    font-size: var(--28px);
+    font-weight: 100;
+    font-family: var(--ff-sans-serif-condensed);
+    letter-spacing: var(--ls-lg);
+    margin-bottom: 1em;
+    text-transform: uppercase;
+}
 
+.numbered-title span {
+    margin-right: 0.8em;
+    color: hsl(var(--light-blue) / 0.25);
+    font-weight: 700;
+}
 
 
 

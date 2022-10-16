@@ -5,16 +5,29 @@
     font-weight: 100;
 }
 
-section h2 {
-    font-size: var(--28px);
-    font-weight: 100;
-    letter-spacing: var(--ls-lg);
-    margin-bottom: 1em;
+section {
+    margin-bottom: 48px;
 }
 
-section h2 span {
-    margin-right: 0.8em;
+section h3 {
     color: hsl(var(--light-blue));
+    margin-bottom: var(--gap, 8px)
+}
+
+
+
+
+
+/* ########################## */
+/* COLORS ################### */
+/* ########################## */
+
+#colors {
+    font-weight: 100;
+}
+
+.color-card {
+    width: 100%;
 }
 
 .color-card .color-swatch {
@@ -27,4 +40,16 @@ section h2 span {
 .color-card span {
     color: hsl(var(--light-blue));
     margin-right: 1.5em;
+}
+
+
+/* ########################## */
+/* TYPOGRAPHY ############### */
+/* ########################## */
+#typography .flex {
+    gap: 24px;
+}
+
+#typography .heading {
+    line-height: 1;
 }
