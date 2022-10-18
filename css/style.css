@@ -183,7 +183,6 @@ select {
 
 .center { text-align: center; }
 
-
 .numbered-title {
     font-size: var(--28px);
     font-weight: 100;
@@ -198,6 +197,15 @@ select {
     color: hsl(var(--light-blue) / 0.25);
     font-weight: 700;
 }
+
+
+
+
+
+
+/* ######################### */
+/* COMPONENTS ############## */
+/* ######################### */
 
 
 

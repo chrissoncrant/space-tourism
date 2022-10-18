@@ -103,37 +103,40 @@ section h3 {
     border-bottom: 2px solid hsl(var(--white));
 }
 
-/* MAIN BUTTON */
-
-.main-buttons-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.main-button-wrapper {
-    width: fit-content;
-}
-
-.main-button {
-    box-sizing: content-box;
+/* LARGE BUTTON */
+.large-button {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
     background-color: white;
-    color: hsl(var(--dark-blue));
-    text-transform: uppercase;
-    width: 274px;
-    height: 274px;
-    border: 88px solid hsl(var(--dark-blue));
+    padding: 0 2em;
     border-radius: 50%;
-    font-size: var(--32px);
+    aspect-ratio: 1;
+    text-decoration: none;
+    margin: 1.5em;
 }
 
-.main-button.idle {
-    border: none;
+.large-button::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(var(--white) / 0.1);
+    border-radius: 50%;
+    opacity: 0;
+    transition: 
+        opacity 1000ms linear, 
+        transform 750ms ease-in-out;
 }
 
-.main-button.active {
-    border-color: rgb(28, 27, 27);
+.large-button:hover::after,
+.large-button:focus::after {
+    opacity: 1;
+    transform: scale(1.5);
 }
+
 
 /* TAB */
 .tabs-wrapper nav {
