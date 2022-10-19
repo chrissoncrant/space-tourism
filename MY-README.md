@@ -10,8 +10,11 @@ The first thing was setting up the project. This involved:
 ## Initial Gameplan
 Create the Design System HTML
 - At first I was just going to use the Figma file as a reference, but I realized that coding this out is the best way to set up the CSS utility classes and custom properties. Plus, more practice is always good!
+
 Mobile-first design. It makes a lot more sense to me to build up to the desktop version than vice versa.
+
 Define components and look for repeated patterns. 
+
 I have been wanting to explore Cube CSS methodology created by Andy Bell (see [Resources](#resources)). The best way to explore something like this is to apply it and so that's the plan. 
 
 ## The Challenges 
@@ -29,3 +32,13 @@ I watched some of the related tutorial to see how Kevin Powell set up his styles
 - I also appreciated the creation of utility classes for the font sizes, and specifically the naming scheme. His naming scheme is to use the font-weight number scale. At first I was hesitant to use this, but it started to make sense to me. The reason it makes sense is because font-size is being set with rem units and so, yes these are based on pixels, but ultimately this value is dependent upon the user. It is more accurate to use this relative scale, then to call them by the pixel name. Before this I was not using font-size utility classes and would be declaring them using var(--150px), etc. This would only be accurate if the user does not change the browser default font-size.
 
 ## The Design System HTML
+I coded this multiple times. First I coded everything myself, then I watched Kevin Powell's walk-through. Doing it this way was helpful as I wasn't dependent upon someone else during the first build.
+During the second build I learned a lot of best practices from Kevin Powell that I plan on implementing. Some of these that I will be using in this and future projects are:
+- Whenever I set the styling for a hover pseudo class I will also include a focus pseudo class. 
+- When creating components I will think about where the best place is to place the component class. Some components, like lists, will generally have a parent/container element and it could be easier to create the component class on the parent, instead of adding one to each of the child elements. I like this methodology.
+- Using the aria-selected attribute for buttons that are active. This is an accessibility thing and I want my websites to be accessible. This is something I want to learn more about and make a priority. 
+
+## The Homepage
+
+The first challenge for this is creating the hamburger navigation. Before seeing how Kevin does this, I am going to build out a hmaburger menu following [Andy Bell's walkthrough](https://piccalil.li/tutorial/build-a-fully-responsive-progressively-enhanced-burger-menu/).
+

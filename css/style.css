@@ -105,6 +105,10 @@ select {
     gap: var(--gap, 1rem);
 }
 
+.justify-space-between {
+    justify-content: space-between;
+}
+
 .grid {
     display: grid;
     gap: var(--gap, 1rem);
@@ -323,6 +327,11 @@ select {
     background-color: hsl(var(--white));
     color: hsl(var(--dark-blue));
 }
+
+
+
+
+
 
 /* ######################### */
 /* GLOBAL STYLES ########### */
