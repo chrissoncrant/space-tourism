@@ -124,45 +124,35 @@
     <section id="interactions" class="flow">
         <h2 class="numbered-title"><span>03</span>interactive elements</h2>
 
-        <div class="nav-wrapper flow" style="--flow-space: 1rem;">
-            <nav class="bg-faded flex">
-                <a class="nav-item" href="#"><span>00</span>Active</a>
-                <a class="nav-item" href="#"><span>01</span>Hovered</a>
-                <a class="nav-item" href="#"><span>02</span>Idle</a>
-            </nav>
-            <p class="text-light-blue center">Different States of Navigation Bar</p>
-        </div>
+        <nav>
+            <ul class="primary-nav flex underline-indicators">
+                <li class="active"><a class="uppercase text-white ls-sm" href="#"><span>01</span>Active</a></li>
+                <li><a class="uppercase text-white ls-sm" href="#"><span>02</span>Hovered</a></li>
+                <li><a class="uppercase text-white ls-sm" href="#"><span>03</span>Idle</a></li>
+            </ul>
+        </nav>
 
         <div class="flex">
             <div style="margin-bottom: 25rem;">                
                 <a href="#" class="large-button uppercase serif fs-600 ls-sm text-dark-blue">explore</a>
             </div>
-            <!-- <div class="flow" style="--flow-space: 4rem;">
-                <div class="tabs-wrapper flow">
-                    <nav>
-                        <a class="nav-item" href="#">Moon</a>
-                        <a class="nav-item" href="#">Mars</a>
-                        <a class="nav-item" href="#">Europa</a>
-                    </nav>
-                    <p class="text-light-blue center" style="--flow-space: 1rem;">Tabs (Active, Hover, & Idle)</p>
+            <div class="flow" style="--flow-space: 4rem;">
+                <div class="tab-list underline-indicators flex">
+                    <button aria-selected="true" class="uppercase ls-md sans-condensed text-light-blue bg-dark-blue">Moon</button>
+                    <button aria-selected="false" class="uppercase ls-md sans-condensed text-light-blue bg-dark-blue">Mars</button>
+                    <button aria-selected="false" class="uppercase ls-md sans-condensed text-light-blue bg-dark-blue">Europa</button>
                 </div>
-                <div class="slider-1-wrapper flow">
-                    <nav>
-                        <div class="dot active"></div>
-                        <div class="dot hover"></div>
-                        <div class="dot"></div>
-                    </nav>
-                    <p class="text-light-blue center" style="--flow-space: 1rem;">Slider 1 States (Active, Hover, & Idle)</p>
+                <div class="dot-indicators flex">
+                    <button aria-selected="true"><span class="screen-reader-only">Dot title</span></button>
+                    <button aria-selected="false"><span class="screen-reader-only">Dot title</span></button>
+                    <button aria-selected="false"><span class="screen-reader-only">Dot title</span></button>
                 </div>
-                <div class="slider-2-wrapper flow">
-                    <nav class="flow" style="--flow-space: 1rem;">
-                        <a class="number-slider active" href="#">1</a>
-                        <a class="number-slider hover" href="#">2</a>
-                        <a class="number-slider idle" href="#">3</a>
-                    </nav>
-                    <p class="text-light-blue center" style="--flow-space: 1rem;">Slider 2 States (Active, Hover, & Idle)</p>
-                </div>
-            </div> -->
+                <div class="numbered-indicators flow">
+                    <button aria-selected="true" class="serif bg-dark-blue">1</button>
+                    <button aria-selected="false" class="serif bg-dark-blue">2</button>
+                    <button aria-selected="false" class="serif bg-dark-blue">3</button>
+                </div>                                
+            </div>
         </div>
     </section>
 </div>
