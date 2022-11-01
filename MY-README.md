@@ -42,3 +42,15 @@ During the second build I learned a lot of best practices from Kevin Powell that
 
 The first challenge for this is creating the hamburger navigation. Before seeing how Kevin does this, I am going to build out a hmaburger menu following [Andy Bell's walkthrough](https://piccalil.li/tutorial/build-a-fully-responsive-progressively-enhanced-burger-menu/).
 
+I spent at least 5 days on following this tutorial. Sure, I could have simply copied and pasted, but that's not my style. At least not in the context of learning. I could swallow my pride if it was necessary and there was a deadline and then spend time outside work learning, but that wasn't the case in this case. 
+
+What took me so long was going through the JavaScript that made the burger menu work. It utilizes Custom Elements which extend the HTMLElement object. It involves ES6 classes, proxy objects, state, the Resize Observer API. All of these I wasn't so familiart with. So I spent time learning about each.
+
+While learning about each I was tearing apart the JS code, thinking about what the heck it was going on and creating a [reference project which has thorough comments on what each part of the code does](https://chrissoncrant.github.io/reference-projects/hamburger-menu/).
+
+I feel like my JS game has levelled up tremendously. 
+
+I will be applying what I learned in that tutorial to this project. 
+
+
+

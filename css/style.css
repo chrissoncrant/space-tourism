@@ -35,6 +35,9 @@
 }
 
 
+:focus {
+    outline: 2px solid hsl(var(--white));
+}
 
 
 
@@ -61,12 +64,13 @@ body {
     font-family: var(--ff-sans-serif-normal);
     font-size: var(--18px);
     color: hsl(var(--white));
+    
 }
 
 img,
 picture {
-  max-width: 100%;
-  display: block;
+    max-width: 100%;
+    display: block;
 }
 
 input, 
@@ -91,6 +95,17 @@ select {
     }
 }
 
+ol[role="list"],
+ul[role="list"] {
+    list-style: none;
+}
+
+a {
+    display: block;
+    font: inherit;
+    color: currentColor;
+}
+
 
 
 
@@ -99,6 +114,13 @@ select {
 /* ######################### */
 /* Utility Classes ######### */
 /* ######################### */
+
+.container {
+    padding: 0px 24px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: calc(1000rem / 16);
+}
 
 .flex {
     display: flex;
@@ -115,15 +137,9 @@ select {
 }
 
 .flow > * + * {
-    margin-top: var(--flow-space, 3rem);
+    margin-top: var(--flow-space, 1rem);
 }
 
-.container {
-    padding: 0px 16px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1000px;
-}
 
 .screen-reader-only {
     position: absolute;
@@ -137,7 +153,9 @@ select {
     border: 0;
 }
 
-
+.bd {
+    border: solid red;
+}
 
 
 
@@ -249,32 +267,41 @@ select {
 /* NAVIGATION */
 
 .primary-nav {
-    --gap: 8rem;
+    --gap: 10rem;
     --underline-gap: 2rem;
-    font-family: var(--ff-sans-serif-condensed);
     list-style: none;
+    font-family: var(--ff-sans-serif-condensed), serif;
+    font-size: var(--16px);
+    color: hsl(var(--white));
     padding: 0;
     margin: 0;
 }
 
+.primary-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0rem 3rem;
+}
+
 .primary-nav a {
     text-decoration: none;
+    display: block;
 }
 
 .primary-nav a > span {
     font-weight: 700;
-    margin-right: 0.5em;
+    margin-right: 0.3em;
 }
 
-.underline-indicators > * {
+.underline-indicators > * > a {
     padding-block: var(--underline-gap, 1rem);
     border: 0;
-    cursor: pointer;
     border-bottom: 0.2rem solid hsl(var(--white) / 0);
 }
 
-.underline-indicators > *:hover,
-.underline-indicators > *:focus {
+.underline-indicators > * > *:hover,
+.underline-indicators > * > *:focus {
+    outline: none;
     border-color: hsl(var(--white) / 0.5);
 }
 
@@ -284,6 +311,7 @@ select {
     border-color: hsl(var(--white));
 }
 
+/* TAB LISTS */
 .tab-list {
     --gap: 2.5rem;
 }
@@ -332,13 +360,17 @@ select {
 
 
 
-
 /* ######################### */
-/* GLOBAL STYLES ########### */
+/* LAYOUT ################## */
 /* ######################### */
-
-.global-header {
-    justify-content: space-between;
+.site-head__inner {
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    padding-block: 64px;
+    justify-content: space-between;
 }
+
+
+
+
+

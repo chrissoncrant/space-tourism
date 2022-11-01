@@ -3,24 +3,60 @@
 <head>
     <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <title>Space Tourism | Home</title>
     <meta name="description" content="[[insert description here]]">
     <meta name="og:image" content="[[meta image source]]">
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="images/C-logo.png?v=1.1" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap" rel="stylesheet">
 
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <!-- <script src="script.js" defer></script> -->
+    <!-- Style Sheet -->
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    
 </head>
 <body class="bg-dark text-white">
+    <header class="site-head" role="banner">
+        <div class="container">
+            <div class="site-head__inner">
+                <a href="#"aria-label="Space Tourism home" class="site-head__brand">
+                    <img src="../images/shared/logo.svg" alt="Space Tourism Logo">
+                </a>
+                <burger-menu maxWidth="670">
+                    <nav class="primary-nav" aria-label="primary">
+                        <ul role="list" class="underline-indicators">
+                            <li>
+                                <a href="#">
+                                    <span>00</span>Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>01</span>Destination
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>02</span>Crew
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>03</span>Technology
+                                </a>
+                            </li>           
+                        </ul>
+                    </nav>
+                </burger-menu>
+            </div>         
+        </div>
+    </header>
 
 <!-- The Content
-00 Home
-01 Destination
-02 Crew
-03 Technology
+
 
 So, you want to travel to
 Space
@@ -30,13 +66,7 @@ because we’ll give you a truly out of this world experience!
 
 Explore
 -->
-
-    <div class="container">
-        <h1>Design System</h1>
-        <section>
-
-        </section>
-    </div>
-
+<script src="../js/script.js" type="module" defer></script>
+<script src="../js/burger-menu.js" type="module" defer></script>
 </body>
 </html>
