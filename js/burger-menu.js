@@ -84,7 +84,7 @@ class BurgerMenu extends HTMLElement {
 
     render() {
         this.innerHTML = `
-            <div class="burger-menu" data-element="burger-root">
+            <div class="burger-root" data-element="burger-root">
                 <button class="burger-menu__trigger" data-element="burger-menu-trigger" type="button" aria-label="Open menu">
                     <span class="burger-menu__bars" aria-hidden="true"></span>
                 </button>
