@@ -17,6 +17,7 @@
     --28px: 1.75rem;
     --32px: 2rem;
     --56px: 3.5rem;
+    --80px: 5rem;
     --100px: 6.25rem;
     --150px: 9.375rem;
 
@@ -36,7 +37,8 @@
 
 
 :focus {
-    outline: 2px solid hsl(var(--white));
+    outline: 2px solid hsl(var(--white) / 0.5);
+    outline-offset: 3px;
 }
 
 
@@ -63,8 +65,7 @@ body {
     background-color: hsl(var(--dark-blue));
     font-family: var(--ff-sans-serif-normal);
     font-size: var(--18px);
-    color: hsl(var(--white));
-    
+    color: hsl(var(--white)); 
 }
 
 img,
@@ -188,8 +189,11 @@ a {
 .sans-normal { font-family: var(--ff-sans-serif-normal); }
 .sans-condensed { font-family: var(--ff-sans-serif-condensed); }
 
+/* 4.8px */
 .ls-lg { letter-spacing: 0.3rem; }
+/* 2.7px */
 .ls-md { letter-spacing: 0.17rem; }
+/* 2.4px */
 .ls-sm { letter-spacing: 0.15rem; }
 
 .uppercase { text-transform: uppercase; }
@@ -220,8 +224,11 @@ a {
     font-weight: 700;
 }
 
-
-
+.home-body {
+    position: relative;
+    isolation: isolate;
+    z-index: 1;
+}
 
 
 
@@ -233,7 +240,6 @@ a {
 
 .large-button {
     position: relative;
-    z-index: 1;
     display: grid;
     place-items: center;
     background-color: white;
@@ -242,6 +248,7 @@ a {
     aspect-ratio: 1;
     text-decoration: none;
     margin: 1.5em;
+    cursor: pointer;
 }
 
 .large-button::after {
@@ -262,6 +269,10 @@ a {
 .large-button:focus::after {
     opacity: 1;
     transform: scale(1.5);
+}
+
+.large-button:focus {
+    outline: none;      
 }
 
 .underline-indicators > * > a {
@@ -329,7 +340,7 @@ a {
 
 
 /* ######################### */
-/* LAYOUT ################## */
+/* HEADER ################## */
 /* ######################### */
 .site-head__inner {
     display: flex;
@@ -340,6 +351,8 @@ a {
 }
 
 /* BURGER MENU */
+
+
 .burger-menu__trigger {
     display: none;
 }
@@ -354,7 +367,6 @@ a {
     display: block;
     width: 32px;
     height: 5px;
-    border-radius: 3px;
     background-color:hsl(var(--white));
     transition: transform 350ms ease-in-out;
 }
@@ -376,7 +388,7 @@ a {
 
 .burger-root[enabled='true'] .burger-menu__trigger {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     display: block;
     width: 2.5rem;
     height: 2.5rem;
@@ -389,11 +401,13 @@ a {
     visibility: hidden;
     opacity: 0;
     position: absolute;
+    z-index: 1;
     top: 0;
     right: 0;
-    width: 16rem;
+    width: 60%;
     height: 100vh;
-    background-color: hsl(var(--white) / 0.2);
+    background-color: hsl(var(--dark-blue) / 0.5);
+    backdrop-filter: blur(50px);
     padding: 72px 32px 0px;
 }
 
@@ -472,6 +486,43 @@ a {
     font-weight: 700;
     margin-right: 0.3em;
 }
+
+
+/* ######################### */
+/* HOMEPAGE ################ */
+/* ######################### */
+.home-body {
+    background-color: hsl(var(--dark-blue));
+    background: url(../images/home/background-home-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.homepage-section {
+    margin-top: 48px;
+}
+
+.homepage-section h1 {
+    font-size: var(--80px);
+    font-family: var(--ff-serif);
+    font-weight: 400;
+}
+
+.homepage-section h1 span {
+    display: block;
+}
+
+.homepage-section .large-button {
+    font-size: 1.25rem;
+    border: none;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
 
 
 
