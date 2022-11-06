@@ -75,11 +75,12 @@ class BurgerMenu extends HTMLElement {
 
         const observer = new ResizeObserver(observedItems => {
             const { contentRect } = observedItems[0];
+            console.log(contentRect.width)
 
             this.state.enabled = contentRect.width <= this.maxWidth;
         });
 
-        observer.observe(this.parentNode);
+        observer.observe(this.parentNode.parentNode.parentNode);
     }
 
     render() {
