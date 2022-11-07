@@ -17,66 +17,56 @@
     <!-- Style Sheet -->
     <link href="../css/style.css" rel="stylesheet" type="text/css">
     
+    <script src="../js/script.js" type="module" defer></script>
 </head>
 <body class="bg-dark text-white home-body">
-    <header class="site-head" role="banner">
-        <div class="container">
-            <div class="site-head__inner">
-                <a href="#"aria-label="Space Tourism home" class="site-head__brand">
-                    <img src="../images/shared/logo.svg" alt="Space Tourism Logo">
-                </a>
-                <burger-menu max-width="768">
-                    <nav class="primary-nav" aria-label="primary">
-                        <ul role="list" class="underline-indicators">
-                            <li>
-                                <a href="#">
-                                    <span>00</span>Home
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>01</span>Destination
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>02</span>Crew
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>03</span>Technology
-                                </a>
-                            </li>           
-                        </ul>
-                    </nav>
-                </burger-menu>
-            </div>         
-        </div>
+    <header class="site-head flex" role="banner">
+        <a href="#" aria-label="Homepage" class="site-head__brand">
+            <img src="../images/shared/logo.svg" alt="Space Tourism Logo">
+        </a>
+        <button type="button" class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span class="screen-reader-only">Main Menu</span></button>
+        <nav class="primary-nav" aria-label="primary" data-visible="false">
+            <ul id="primary-navigation" role="list" class="flex underline-indicators">
+                <li>
+                    <a href="../html/index.html" class="active">
+                        <span>00</span>Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>01</span>Destination
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>02</span>Crew
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>03</span>Technology
+                    </a>
+                </li>           
+            </ul>
+        </nav>
     </header>
     <main>
-        <section class="page-section homepage-section center">
-            <div class="container">
-                <h1 class="uppercase"><span class="text-light-blue fs-300 ls-md sans-condensed">so, you want to travel to</span> space</h1>
-                <p class="fs-300 text-light-blue">
-                    Let’s face it; if you want to go to space, you might as well genuinely go to 
-                    outer space and not hover kind of on the edge of it. Well sit back, and relax 
-                    because we’ll give you a truly out of this world experience!
-                </p>
-                <button class="large-button uppercase serif">explore</button>
-            </div>
+        <section class="page-section homepage-section grid-container">
+                <div class="grid-collection">
+                    <h1 class="uppercase serif fs-900">
+                        <span class="text-light-blue fs-300 ls-md sans-condensed display-block">so, you want to travel to</span>
+                        space
+                    </h1>
+                    <p class="fs-300 text-light-blue">
+                        Let’s face it; if you want to go to space, you might as well genuinely go to
+                        outer space and not hover kind of on the edge of it. Well sit back, and relax
+                        because we’ll give you a truly out of this world experience!
+                    </p>
+                </div>
+                <div class="grid-collection">
+                    <button class="large-button uppercase serif fs-600">explore</button>
+                </div>
         </section>
     </main>
-
-<!-- The Content
-
-Let’s face it; if you want to go to space, you might as well genuinely go to 
-outer space and not hover kind of on the edge of it. Well sit back, and relax 
-because we’ll give you a truly out of this world experience!
-
-Explore
--->
-<script src="../js/script.js" type="module" defer></script>
-<script src="../js/burger-menu.js" type="module" defer></script>
 </body>
 </html>
