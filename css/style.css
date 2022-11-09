@@ -142,11 +142,7 @@ p a {
         text-align: left;
     }
 
-    .homepage-section.grid-container {
-        padding-bottom: max(6rem, 20vh);
-        align-items: end;
-    }
-
+    
     .grid-container > *:first-child {
         grid-column: 2;
     }
@@ -154,7 +150,12 @@ p a {
     .grid-container > *:last-child {
         grid-column: 3;
     }
-
+    
+    .homepage-section.grid-container {
+        padding-bottom: max(6rem, 20vh);
+        align-items: end;
+    }
+    
     .homepage-section.grid-container > *:last-child {
         place-self: end end;
     }

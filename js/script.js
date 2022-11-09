@@ -26,7 +26,10 @@ burgerButton.addEventListener('click', event => {
 const burgerBtnMql = window.matchMedia('(max-width: 35em)');
 
 function manageFocus() {
-     if (burgerBtnMql.matches) {
+
+    const isBurgerButtonVisible = burgerBtnMql.matches;
+    
+    if (isBurgerButtonVisible) {
         if (burgerButton.getAttribute('aria-expanded') === 'false') {
             primaryNav.querySelectorAll('a').forEach(link => {
                 link.setAttribute('tabindex', '-1')

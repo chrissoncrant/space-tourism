@@ -52,5 +52,23 @@ I feel like my JS game has levelled up tremendously.
 
 I will be applying what I learned in that tutorial to this project. 
 
+### The Homepage - My Way
+I managed to apply the reponsive burger menu to the homepage and finished styling it to taste. I did encounter a funny issue where there was a sort of no-mans land happening between window sizes.
+
+It took me a bit to figure out what was happening here, then I found out that it has to do with the vertical scrollbar. The vertical scrollbar reduced the size of the container, but the media query that adjusted the font-sizes wasn't impacted.
+
+As the window widened, the parent reached the right size to update the burger button visibility and also reached the media query, which changed the font-size in a way that caused the vertical scrollbar to appear. The vertical scroll bar reduced the size of the parent container, which altered the burger button visiblity making it appear when the media query styles assumed it wasn't visible. This lasted for a pixel amount equal to the size of the scrollbar.
+
+To solve this I eliminated the vertical scrolling. This is okay for this app because it is a single page, non-scrolling site. For other apps I would need to either set the container that is being observed to be the window object itself, or add a fucntionality which checks for scrollbar visibilty and compensate for the width. 
+
+### The Homepage - Kevin's Way
+Once I got the homepage styled and completed I then branched and redid it by following along with Kevin. I learned a few things along the way. 
+
+I liked his approach of mobile-first when it comes to styling and desktop first when it comes to HTML structure. My intuition says that this makes sense, yet I need to explore it more. It felt rather chaotic to me while following along with Kevin. It certainly wasn't a linear process, but that's okay. 
+
+The most interesting part was the horizontal line in the header. It's easy to just plop down an ornamental line in a graphics program, but when it comes time to create it in the actual environment that it will live in (the one that matters in other words) it is a different story. I managed to solve this problem on my own, then watched Kevin's solution and this introduced me to the 'order' property which I will not forget. 
+
+## Destination Page
+
 
 
