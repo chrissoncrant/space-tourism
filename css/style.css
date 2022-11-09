@@ -525,11 +525,6 @@ p a {
         transition: transform 350ms linear;
     }
 
-    .open {
-        transform: translateX(0);
-        transition: transform 350ms ease;
-    }
-
     .primary-nav ul {
         flex-direction: column;
     }
