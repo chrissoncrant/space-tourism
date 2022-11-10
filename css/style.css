@@ -60,7 +60,6 @@ body {
     background-color: hsl(var(--dark-blue));
     display: grid;
     grid-template-rows: min-content 1fr;
-    overflow-y: hidden;
 }
 
 img,
@@ -155,7 +154,7 @@ p a {
         padding-bottom: max(6rem, 20vh);
         align-items: end;
     }
-    
+
     .homepage-section.grid-container > *:last-child {
         place-self: end end;
     }
@@ -347,14 +346,21 @@ p a {
 
 /* UNDERLINE INDICATORS */
 
-.underline-indicators > * > a {
+.underline-indicators > * > a,
+.underline-indicators > button {
     padding-block: var(--underline-gap, 1rem);
     border: 0;
     border-bottom: 0.2rem solid hsl(var(--white) / 0);
 }
 
+.underline-indicators > button {
+    cursor: pointer;
+}
+
 .underline-indicators > * > a:hover,
-.underline-indicators > * > a:focus {
+.underline-indicators > * > a:focus,
+.underline-indicators > button:hover,
+.underline-indicators > button:focus {
     outline: none;
     border-color: hsl(var(--white) / 0.5);
 }
@@ -368,6 +374,7 @@ p a {
 /* TAB AND DOT LISTS */
 .tab-list {
     --gap: 2.5rem;
+    padding-bottom: 24px;
 }
 
 .dot-indicators > * {
@@ -431,7 +438,7 @@ p a {
 }
 
 .site-head__brand {
-    margin: clamp(24px, 5vw, 64px) clamp(24px, 5vw, 55px);
+    margin: clamp(24px, 5vw, 64px) clamp(24px, 4.5vw, 55px);
     width: 48px;
     position: relative;
 }
@@ -569,8 +576,12 @@ p a {
 
 
 /* ######################### */
-/* BODY #################### */
+/* HOMEPAGE ################ */
 /* ######################### */
+
+.home-body {
+    overflow-y: hidden;
+}
 
 .homepage-section h1 {
     font-weight: 400;
@@ -587,6 +598,46 @@ p a {
 }
 
 
+
+
+/* ######################### */
+/* DESTINATIONS ############ */
+/* ######################### */
+
+.destinations-body .numbered-title {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.destination-page-section {
+    text-align: center;
+}
+
+.destination-page-section img {
+    width: 250px;
+}
+
+.destination-page-section .tab-list {
+    justify-content: center;
+}
+
+.destination-page-section h2,
+.destination-page-section h3 {
+    font-weight: 400;
+}
+
+.destination-page-section h2 + p {
+    padding-bottom: 36px;
+}
+
+.destination-stats {
+    flex-direction: column;
+    padding-block: 36px;
+    border-top: 1px solid hsl(var(--white) / 0.2);
+}
+
+
+
 /* ######################### */
 /* BACKGROUND IMAGE ######## */
 /* ######################### */
@@ -598,16 +649,31 @@ p a {
     background-position: bottom center;
 }
 
+.destinations-body {
+    background-image: url(../images/destination/background-destination-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
 @media (min-width: 35em) {
     .home-body {
         background-image: url(../images/home/background-home-tablet.jpg);
         background-position: center center;  
+    }
+
+    .destinations-body {
+        background-image: url(../images/destination/background-destination-tablet.jpg);
     }
 }
 
 @media (min-width: 45em) {
     .home-body {
         background-image: url(../images/home/background-home-desktop.jpg);
+    }
+
+    .destinations-body {
+        background-image: url(../images/destination/background-destination-desktop.jpg);
     }
 }
 
