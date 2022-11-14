@@ -209,6 +209,7 @@ p a {
 .bg-light-blue { background-color: hsl(var(--light-blue)); }
 .bg-white { background-color: hsl(var(--white)); }
 .bg-faded { background-color: hsl(var(--white) / 0.04); }
+.bg-transparent { background-color: hsl(var(--dark-blue) / 0); }
 
 
 .text-dark-blue { color: hsl(var(--dark-blue)); }
@@ -359,9 +360,17 @@ p a {
 
 .underline-indicators > * > a:hover,
 .underline-indicators > * > a:focus,
-.underline-indicators > button:hover,
+.underline-indicators > button:hover {    
+    outline: none;
+    border-color: hsl(var(--white) / 0.5);
+}
+
 .underline-indicators > button:focus {
     outline: none;
+    outline-offset: 0px;
+}
+
+.underline-indicators > button:focus-visible {
     border-color: hsl(var(--white) / 0.5);
 }
 
