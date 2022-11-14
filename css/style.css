@@ -380,6 +380,10 @@ p a {
     border-color: hsl(var(--white));
 }
 
+a.active-page {
+    border-bottom: 0.2rem solid hsl(var(--white));
+}
+
 /* TAB AND DOT LISTS */
 .tab-list {
     --gap: 2.5rem;
