@@ -116,7 +116,7 @@ p a {
 /* ######################### */
 
 .container {
-    padding: 0px 24px;
+    padding: 0px 32px;
     margin-left: auto;
     margin-right: auto;
     max-width: calc(1000rem / 16);
@@ -144,10 +144,12 @@ p a {
     
     .grid-container > *:first-child {
         grid-column: 2;
+        /* border: solid red; */
     }
     
     .grid-container > *:last-child {
         grid-column: 3;
+        /* border: solid red; */
     }
     
     .homepage-section.grid-container {
@@ -317,7 +319,7 @@ p a {
     border-radius: 50%;
     aspect-ratio: 1;
     text-decoration: none;
-    /* margin: 2em; */
+    margin: 2em;
     cursor: pointer;
 }
 
@@ -386,7 +388,7 @@ a.active-page {
 
 /* TAB AND DOT LISTS */
 .tab-list {
-    --gap: 2.5rem;
+    --gap: 1.75rem;
     padding-bottom: 24px;
 }
 
@@ -432,12 +434,19 @@ a.active-page {
     color: hsl(var(--dark-blue));
 }
 
-.page-section {
-    margin-bottom: 48px;
-    height: 100%;
+.page-title {
+    padding-top: 2rem;
 }
 
+.page-title.container {
+    max-width: 1200px;
+}
 
+@media (min-width: 45rem) {
+    .page-title {
+        padding-top: 0;
+    }
+}
 
 
 
@@ -592,8 +601,8 @@ a.active-page {
 /* HOMEPAGE ################ */
 /* ######################### */
 
-.home-body {
-    overflow-y: hidden;
+.homepage-section {
+    height: 100%;
 }
 
 .homepage-section h1 {
@@ -618,7 +627,7 @@ a.active-page {
 /* ######################### */
 
 .destinations-body .numbered-title {
-    font-size: 1.2rem;
+    font-size: var(--16px);
     text-align: center;
 }
 
@@ -626,12 +635,14 @@ a.active-page {
     text-align: center;
 }
 
-.destination-page-section img {
+.destination-image img {
     width: 250px;
+    padding-block: 24px;
 }
 
 .destination-page-section .tab-list {
     justify-content: center;
+    font-size: var(--14px);
 }
 
 .destination-page-section h2,
@@ -650,6 +661,62 @@ a.active-page {
     border-top: 1px solid hsl(var(--white) / 0.2);
 }
 
+@media (min-width: 35rem) {
+    .destinations-body .numbered-title {
+        text-align: left;
+        font-size: var(--20px);
+    }
+
+    .destination-image img {
+        width: 300px;
+    }
+
+    .destinations-body .tab-list {
+        font-size: var(--16px);
+    }
+
+    .destination-page-section h2 {
+        font-size: var(--80px);
+    }
+
+    .destination-stats {
+        --gap: 6rem;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 45rem) {
+    .destinations-body .numbered-title {
+        font-size: var(--28px);
+    }
+
+    .destination-page-section {
+        text-align: left;
+    }
+
+    .destination-page-section .tab-list {
+        --gap: clamp(1.250rem, 5.161vw + -1.073rem, 1.750rem);
+        justify-content: flex-start;
+    }
+
+    .destination-image img {
+        width: 445px;
+    }
+
+    .destination-page-section h2 {
+        font-size: clamp(4.000rem, 23.226vw + -6.452rem, 6.250rem);
+    }
+
+    .destination-page-section h2 + p {
+        font-size: clamp(1rem, 0.5vw + 0.775rem, 1.125rem);
+    }
+
+    .destination-stats {
+        --gap: 2rem;
+        flex-direction: column;
+    }
+}
 
 
 /* ######################### */
