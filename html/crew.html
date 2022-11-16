@@ -20,9 +20,10 @@
     <!-- Style Sheet -->
     <link href="../css/style.css" rel="stylesheet" type="text/css">
     
+    <script src="../js/crew.js" type="module" defer></script>
     <script src="../js/script.js" type="module" defer></script>
 </head>
-<body class="bg-dark text-white home-body">
+<body class="bg-dark text-white crew-body">
     <header class="site-head flex" role="banner">
         <a href="#main" class="skip-link">Skip to content</a>
         <a href="#" aria-label="Homepage" class="site-head__brand">
@@ -33,28 +34,44 @@
         <nav class="primary-nav" aria-label="primary" data-visible="false">
             <ul id="primary-navigation" role="list" class="flex underline-indicators">
                 <li>
-                    <a href="../html/index.html" class="">
+                    <a href="index.html" class="">
                         <span aria-hidden="true">00</span>Home
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="destination.html">
                         <span aria-hidden="true">01</span>Destination
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="active-page">
+                    <a href="crew.html" class="active-page">
                         <span aria-hidden="true">02</span>Crew
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="technology.html">
                         <span aria-hidden="true">03</span>Technology
                     </a>
                 </li>           
             </ul>
         </nav>
     </header>
-    <main id="main"></main>
+    <main id="main">
+        <section class="page-section crew-page-section grid-container">
+            <h1 class="numbered-title"><span>02</span>meet your crew</h1>
+            <picture class=""><img src="../images/crew/image-douglas-hurley.webp" alt="Captain Douglas Hurley"></picture>
+            <div class="dot-indicators flex">
+                <button type="button" aria-selected="true" value="1"><span class="screen-reader-only">Commander Douglas Hurley</span></button>
+                <button type="button" aria-selected="false" value="2"><span class="screen-reader-only">Mission Specialist Mark Shuttleworth</span></button>
+                <button type="button" aria-selected="false" value="3"><span class="screen-reader-only">Pilot Victor Glover</span></button>
+                <button type="button" aria-selected="false" value="4"><span class="screen-reader-only">Flight Engineer Anousheh Ansari</span></button>
+            </div>
+            <article class="content flow" style="--flow-space: 1rem">
+                <h2 class="uppercase serif"data-element="name"><span class="text-faded"data-element="position">commander</span>douglas hurley</h2>
+                <p class="text-light-blue fs-300">Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.</p>
+            </article>
+
+        </section>
+    </main>
 </body>
 </html>

@@ -95,6 +95,12 @@ ul[role="list"] {
     list-style: none;
 }
 
+h1,
+h2,
+h3 {
+    font-weight: 400;
+}
+
 a {
     display: block;
     font: inherit;
@@ -130,8 +136,33 @@ p a {
     /* border: 2px solid red; */
 }
 
-.grid-container > * {
+.grid-container p {
     max-width: 45ch;
+}
+
+.crew-page-section.grid-container {
+    grid-template-areas: 
+        'title'
+        'image'
+        'dots'
+        'content'
+    ;
+}
+
+.crew-page-section.grid-container .numbered-title {
+    grid-area: 'title';
+}
+
+.crew-page-section.grid-container img {
+    grid-area: 'image'
+}
+
+.crew-page-section.grid-container .dot-indicators {
+    grid-area: 'dots'
+}
+
+.crew-page-section.grid-container .content {
+    grid-area: 'content'
 }
 
 @media (min-width: 45em) {
@@ -142,12 +173,12 @@ p a {
     }
 
     
-    .grid-container > *:first-child {
+    .homepage-section.grid-container > *:first-child {
         grid-column: 2;
         /* border: solid red; */
     }
     
-    .grid-container > *:last-child {
+    .homepage-section.grid-container > *:last-child {
         grid-column: 3;
         /* border: solid red; */
     }
@@ -392,6 +423,10 @@ a.active-page {
     padding-bottom: 24px;
 }
 
+.dot-indicators {
+    --gap: 2rem;
+}
+
 .dot-indicators > * {
     cursor: pointer;
     border: 0;
@@ -626,7 +661,7 @@ a.active-page {
 /* DESTINATIONS ############ */
 /* ######################### */
 
-.destinations-body .numbered-title {
+.numbered-title {
     font-size: var(--16px);
     text-align: center;
 }
@@ -662,7 +697,7 @@ a.active-page {
 }
 
 @media (min-width: 35rem) {
-    .destinations-body .numbered-title {
+    .numbered-title {
         text-align: left;
         font-size: var(--20px);
     }
@@ -687,7 +722,7 @@ a.active-page {
 }
 
 @media (min-width: 45rem) {
-    .destinations-body .numbered-title {
+    .numbered-title {
         font-size: var(--28px);
     }
 
@@ -719,6 +754,32 @@ a.active-page {
 }
 
 
+
+
+
+/* ######################### */
+/* CREW #################### */
+/* ######################### */
+.crew-page-section picture {
+    border-bottom: 1px solid hsl(var(--white) / 0.1)
+}
+.crew-page-section img {
+    width: 50%;
+    padding-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.crew-page-section .dot-indicators {
+    padding-block: 36px;
+}
+
+.crew-page-section h2 span {
+    display: block;
+}
+
+
+
 /* ######################### */
 /* BACKGROUND IMAGE ######## */
 /* ######################### */
@@ -737,6 +798,13 @@ a.active-page {
     background-position: center center;
 }
 
+.crew-body {
+    background-image: url(../images/crew/background-crew-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
 @media (min-width: 35em) {
     .home-body {
         background-image: url(../images/home/background-home-tablet.jpg);
@@ -745,6 +813,10 @@ a.active-page {
 
     .destinations-body {
         background-image: url(../images/destination/background-destination-tablet.jpg);
+    }
+
+    .crew-body {
+        background-image: url(../images/crew/background-crew-tablet.jpg);
     }
 }
 
@@ -755,6 +827,10 @@ a.active-page {
 
     .destinations-body {
         background-image: url(../images/destination/background-destination-desktop.jpg);
+    }
+
+    .crew-body {
+        background-image: url(../images/crew/background-crew-desktop.jpg);
     }
 }
 
