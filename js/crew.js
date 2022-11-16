@@ -29,16 +29,6 @@ const dotButtons = document.querySelector('.dot-indicators').children;
 
 const obj1 = crewArr[0];
 
-const span = document.createElement('span')
-const position = document.createTextNode('Commander');
-const h2 = document.createElement('h2');
-const name = document.createTextNode("Gary Jones");
-span.appendChild(position);
-h2.appendChild(span);
-h2.appendChild(name);
-
-console.log(h2)
-
 let initialDot = dotButtons[0];
 
 [...dotButtons].forEach(button => {
@@ -46,15 +36,34 @@ let initialDot = dotButtons[0];
         if (button === initialDot) {
             return;
         } else {
+            //Style selected dot
             initialDot.setAttribute('aria-selected', 'false');
 
             initialDot = button;
 
             button.setAttribute('aria-selected', 'true');
 
-            const obj = crewArr[button.value - 1];
+            //Get object
+            const crewObj = crewArr[button.value - 1];
 
-            console.log(obj)
+            //Get and set image
+            const image = document.querySelector("[data-element='image']");
+
+            image.setAttribute('src', `../images/crew/${crewObj.imageSrc}`);
+
+            //Get and set name
+            const position = document.querySelector("[data-element='position']");
+
+            const name = document.querySelector("[data-element='name']");
+
+            position.textContent = crewObj.position;
+
+            name.textContent = crewObj.name;
+
+            //Get and set description
+            const description = document.querySelector("[data-element='description']");
+
+            description.textContent = crewObj.description;
         }
     })
 })
