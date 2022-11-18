@@ -29,17 +29,17 @@ const dotButtons = document.querySelector('.dot-indicators').children;
 
 const obj1 = crewArr[0];
 
-let initialDot = dotButtons[0];
+let selectedDot = dotButtons[0];
 
 [...dotButtons].forEach(button => {
     button.addEventListener('click', () => {
-        if (button === initialDot) {
+        if (button === selectedDot) {
             return;
         } else {
             //Style selected dot
-            initialDot.setAttribute('aria-selected', 'false');
+            selectedDot.setAttribute('aria-selected', 'false');
 
-            initialDot = button;
+            selectedDot = button;
 
             button.setAttribute('aria-selected', 'true');
 

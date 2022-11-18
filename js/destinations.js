@@ -1,4 +1,3 @@
-
 const destinationsArr = [
     {
         name: 'moon',
