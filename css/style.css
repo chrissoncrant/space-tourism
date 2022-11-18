@@ -172,7 +172,7 @@ p a {
         'buttons'
         'content'
     ;
-    padding-left: 24px;
+    padding-inline: 0px;
 }
 
 .technology-page-section .page-title {
@@ -212,8 +212,8 @@ p a {
         column-gap: var(--container-gap, 2rem);
         grid-template-columns: minmax(2em, 1fr) repeat(2, minmax(0px, 30rem)) minmax(2em, 1fr);
         text-align: left;
+        padding-inline: 0;
     }
-
     
     .homepage-section.grid-container > *:first-child,
     .destination-page-section.grid-container > *:first-child {
@@ -236,11 +236,29 @@ p a {
         place-self: end end;
     }
 
+    .destination-page-section.grid-container {
+        grid-template-areas: 
+            '. title title .'
+            '. image content .'
+        ;
+    }
+    .destination-page-section.grid-container .numbered-title {
+        grid-area: title;
+    }
+
+    .destination-page-section.grid-container .destination-image {
+        grid-area: image;
+    }
+
+    .destination-page-section.grid-container .content {
+        grid-area: content;
+    }
+
     .crew-page-section.grid-container {
         grid-template-areas: 
-            '. title image image'
-            '. content image image'
-            '. dots image image'
+            '. title title .'
+            '. content image .'
+            '. dots image .'
         ;
     }
 
@@ -250,17 +268,17 @@ p a {
 
     .crew-page-section.grid-container .dot-indicators {
         align-self: start;
+        padding-block: 0px;
+        justify-self: start;
+    }
+
+    .crew-page-section.grid-container picture {
+        align-self: end;
     }
 
     .technology-page-section.grid-container .page-title,
     .technology-page-section.grid-container .numbered-indicators {
         padding-left: 32px;
-    }
-
-
-
-    .crew-page-section.grid-container picture {
-        align-self: end;
     }
 
     .technology-page-section.grid-container {
@@ -269,10 +287,7 @@ p a {
             '. title title title'
             '. buttons content image'
         ;
-        padding-inline: 0;
     }
-
-    
 
     .technology-page-section.grid-container picture {
         justify-self: end;
@@ -420,7 +435,7 @@ p a {
 
 .numbered-title span {
     margin-right: 0.8em;
-    color: hsl(var(--light-blue) / 0.25);
+    color: hsl(var(--light-blue) / 0.35);
     font-weight: 700;
 }
 
@@ -578,10 +593,6 @@ a.active-page {
     padding-top: 2rem;
     position: relative;
     z-index: 1;
-}
-
-.page-title.container {
-    max-width: 1200px;
 }
 
 @media (min-width: 45rem) {
@@ -777,6 +788,10 @@ a.active-page {
     text-align: center;
 }
 
+.destination-page-section .page-title {
+    justify-self: start;
+}
+
 .destination-image img {
     width: 250px;
     padding-block: 24px;
@@ -875,6 +890,13 @@ a.active-page {
 
 .crew-page-section picture {
     border-bottom: 1px solid hsl(var(--white) / 0.1);
+    width: 100%;
+}
+
+.crew-page-section picture img {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .crew-page-section .dot-indicators {
@@ -922,6 +944,7 @@ a.active-page {
 @media (min-width: 45em) {
     .crew-page-section .numbered-title {
         font-size: clamp(1.250rem, 2.462vw + 0.135rem, 1.750rem);
+        font-size: var(--28px);
     }
     
     .crew-page-section picture {
@@ -933,9 +956,9 @@ a.active-page {
         padding: 0.46875rem;
     }
 
-    .crew-page-section .content {
+    /* .crew-page-section .content {
         padding-left: 2rem;
-    }
+    } */
 
     [data-element='position'] {
         font-size: var(--40px);
@@ -965,7 +988,7 @@ a.active-page {
 }
 
 .technology-page-section p {
-    margin-top: 24px;
+    margin-top: 16px;
     padding-bottom: 36px;
     font-size: calc(15rem / 16);
 }

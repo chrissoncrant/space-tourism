@@ -27,13 +27,62 @@ const technologyArr = [
 
 const tabs = document.querySelector('.numbered-indicators').children;
 
-const selectedTab = tabs[0];
+let selectedTab = tabs[0];
+
+const imageMql = window.matchMedia('(min-width: 45em)');
+
+const image = document.querySelector('.technology-page-section img');
+
+//Load portrait if desktop
+if (imageMql.matches) {
+    image.setAttribute('src', '../images/technology/image-launch-vehicle-portrait.jpg');
+}
+
+function setImageOrientation() {
+    const activeTab = document.querySelector('[aria-selected="true"]');
+
+    const obj = technologyArr[activeTab.textContent - 1];
+
+    if (imageMql.matches) {
+        image.setAttribute('src',`../images/technology/${obj.imageSrc.portrait}`)
+    } else {
+        image.setAttribute('src',`../images/technology/${obj.imageSrc.landscape}`)
+    }
+}
+
+imageMql.addEventListener('change', setImageOrientation);
+
 
 [...tabs].forEach(tab => {
     tab.addEventListener('click', () => {
         if (selectedTab === tab) {
             console.log('selected');
+            console.log(imageMql.matches);
             return;
+        } else {
+            //Get Tech Object
+            const techObj = technologyArr[tab.textContent - 1];
+
+            //Update styling
+            selectedTab.setAttribute('aria-selected', 'false');
+
+            selectedTab = tab;
+
+            selectedTab.setAttribute('aria-selected', 'true');
+
+            //Update Image
+            setImageOrientation();
+
+            //Update Title
+            const title = document.querySelector('[data-element="tech"');
+
+            title.textContent = techObj.tech;
+
+            //Update Description
+            const description = document.querySelector('[data-element="description"');
+
+            description.textContent = techObj.description;
+
         }
     })
 })
