@@ -41,7 +41,7 @@ if (imageMql.matches) {
 function setImageOrientation() {
     const activeTab = document.querySelector('[aria-selected="true"]');
 
-    const obj = technologyArr[activeTab.textContent - 1];
+    const obj = technologyArr[activeTab.value - 1];
 
     if (imageMql.matches) {
         image.setAttribute('src',`../images/technology/${obj.imageSrc.portrait}`)
@@ -56,12 +56,10 @@ imageMql.addEventListener('change', setImageOrientation);
 [...tabs].forEach(tab => {
     tab.addEventListener('click', () => {
         if (selectedTab === tab) {
-            console.log('selected');
-            console.log(imageMql.matches);
             return;
         } else {
             //Get Tech Object
-            const techObj = technologyArr[tab.textContent - 1];
+            const techObj = technologyArr[tab.value - 1];
 
             //Update styling
             selectedTab.setAttribute('aria-selected', 'false');
