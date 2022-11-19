@@ -445,6 +445,7 @@ p a {
     position: relative;
     display: inline-grid;
     place-items: center;
+    color:hsl(var(--dark-blue));
     background-color: white;
     padding: 0 2em;
     border: none;
