@@ -968,6 +968,7 @@ a.active-page {
     
     .crew-page-section picture {
         min-width: 500px;
+        margin-left: 150px;
         /* border: solid limegreen; */
     }
 
