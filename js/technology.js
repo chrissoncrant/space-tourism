@@ -82,7 +82,6 @@ imageMql.addEventListener('change', setImageOrientation);
             const description = document.querySelector('[data-element="description"');
 
             description.textContent = techObj.description;
-
         }
     })
 })

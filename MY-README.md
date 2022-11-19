@@ -69,6 +69,71 @@ I liked his approach of mobile-first when it comes to styling and desktop first 
 The most interesting part was the horizontal line in the header. It's easy to just plop down an ornamental line in a graphics program, but when it comes time to create it in the actual environment that it will live in (the one that matters in other words) it is a different story. I managed to solve this problem on my own, then watched Kevin's solution and this introduced me to the 'order' property which I will not forget. 
 
 ## Destination Page
+I got this page working using flex mode, then watched the tutorial and I liked Kevin's usage of grid. Plus, I haven't had much practice with grid and thought this was an opportunity to do so.
+
+I did take an alternate approach here which I used on all the rest of the pages. Instead of coding all the content for each of the different 'slides' within the page, I used JavaScript to dynamically fill in the content based on the active tab/button.
+
+This was exciting for me. I think something clicked inside by doing it this way. I remember after getting it running, just clicking through the tabs seeing the content switch, thinking about how cool it was that it was working.
+
+The next problem I wanted to solve was the focus issue. I am sure this was going to be addressed in the tutorial, but I wanted to see what I could do myself.
+
+The problem was that the elements within the navigation were being focused on even when the burger menu was visible and the navigation was closed. 
+
+I needed some sort of hook in order to manage the focus. I disocvered the Media Query Listener API which allowed me to check if the page fell into a specific media query and then using the "change" even I could alter the navigation elements by adding or removing tabindex=-1 as necessary. 
+
+My previous studies in the burger menu building was helpful. They gave me awareness to using the tabindex attribute to remove focus, and also made me aware of the good user experience of closing the menu when an item outside the menu is focused on. 
+
+I am satisfied and proud of the implementation I came up with to accomplish this. 
+
+Another thing I addressed, that I didn't see addressed by Kevin was updating the focus styling. This led me to a bit of a detour where I studied how link pseudo classes and focus and focus-visible styling works. The trick here was making the focus work just like it would by default. 
+
+The problem I encountered with Kevin's code was that when clicking a button or tab, the focus styling would remain. This is not how it would behave by default. Thanks to my research I learned that this could be remedied by using the focus-visible pseudo class. 
+
+Another problem I encountered was when a tab or button was active, the focus was not visible, so I added a specific selector for the active tab/button and used focus-visible to give it a consistent styling.
+
+## Crew Page
+This page gave me more practice with grid and specifically grid-template-areas property. I really like how this works. This page went by rapidly as it used the same principles as the previous pages.
+
+One thing that I did do was to add the dynamic content loading script into a page specific file.
+
+I also thought of an easy way to indicate the active tabs based on what page is being viewed which simply involved me editing the html of each individual page. Simple and effective. 
+
+## Technology Page
+This page gave me more practice with using grid-template-areas. This page had some unique things going for it style-wise. First there was the image that goes right up against the left edge. Second, there were two orientations for each of the images.
+
+The first problem was addressed by making a new grid-template-columns scheme.
+
+The next problem I knew would involve a bit more thought. 
+
+Before tackling this I decided that I wanted to address certain inconsistencies across the previous two pages. Specifically, the page title. The page title was not sitting the same and so I went through and made sure this was fixed. 
+
+Now it was time for the dynamic loading of the last page. Everything was almost the same here except for the images. I needed a way to set the image orientation based on the viewport width. Luckily I had just learned about the Media Query List API and used that again.
+
+By default the page's html is mobile-first and so the landscape image loads. The problem with this is if the user is within the desktop media query the image will load wrong. To solve this, on page load a check is made and if the media query is desktop it will load in the portrait image. 
+
+Next I needed a listener to change the orientation. This worked similar to the focus function. I used the 'change' event set on the Media Query List variable and this set the proper image orientation, choosing the image based on the active tab/button. I created a function for this as I knew I would need to use it again when setting up the click listener on the buttons. 
+
+
+## Other Things
+I love finding the edge cases, seeing where the design breaks and trying to account for those. Most of the time this came up right when the site changes from tablet to desktop.
+
+Usually the problem would be fonts being too large. To solve this issue I utilized a simple clamp value.
+
+I know with the clamp CSS function there is usually a lot of guesswork and I don't like that kind of guesswork.
+
+Awhile back I spent time going through [this article on how the clamp function works and how to calculate the values](https://www.smashingmagazine.com/2022/01/modern-fluid-typography-css-clamp/). I was glad that I took notes and wrote out the formulas so I didn't have to re-read it, as it was not light reading. 
+
+After calculating a couple clamp values and marveling at how accurately they were working I decided to create the start of a simple calculator to make this process easier. The formulas are not too ugly, but keeping all the variables in order and plugging them in correctly took more mental effort than I liked and left room for mistakes. 
+
+So I made a [calculator for clamp values](https://chrissoncrant.github.io/reference-projects/fluid-type-calculator/index.html).
+
+It's very basic as far as styling goes, but it is a functional minimum viable product. 
+
+## Conclusions
+
+I still have a lot of the tutorial left to watch. Looking back from the start I know I have learned a tremendous amount. Initially this project seemd quite challenging for the fact that I did not know how I would tackle things like the hamburger menu and the tab selectors. Now those things are no longer mysterious.
+
+I believe there would be additional value in recreating this project from scratch, going just by my own instincts. I will probably do this soon.
 
 
 
