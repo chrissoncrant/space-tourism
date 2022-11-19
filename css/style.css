@@ -296,6 +296,7 @@ p a {
     .technology-page-section.grid-container .page-title,
     .technology-page-section.grid-container .numbered-indicators {
         padding-left: 32px;
+        align-self: start;
     }
 
     .technology-page-section.grid-container {
