@@ -140,6 +140,12 @@ p a {
     max-width: 45ch;
 }
 
+@media (max-width: 35em) {
+    .grid-container p {
+        padding-inline: 16px;
+    }
+}
+
 .destination-page-section.grid-container picture {
     align-self: center;
 }
