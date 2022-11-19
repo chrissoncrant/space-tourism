@@ -6,6 +6,7 @@ const technologyArr = [
             landscape: 'image-launch-vehicle-landscape.jpg',
             portrait: 'image-launch-vehicle-portrait.jpg'
         },
+        alt: 'Launch vehicle'
     },
     {
         tech: "spaceport",
@@ -14,6 +15,7 @@ const technologyArr = [
             landscape: 'image-spaceport-landscape.jpg',
             portrait: 'image-spaceport-portrait.jpg'
         },
+        alt: 'Spaceport'
     },
     {
         tech: "space capsule",
@@ -22,6 +24,7 @@ const technologyArr = [
             landscape: 'image-space-capsule-landscape.jpg',
             portrait: 'image-space-capsule-portrait.jpg'
         },
+        alt: 'Space Capsule'
     },
 ]
 
@@ -69,6 +72,7 @@ imageMql.addEventListener('change', setImageOrientation);
             selectedTab.setAttribute('aria-selected', 'true');
 
             //Update Image
+            image.setAttribute('alt', `${techObj.alt}`)
             setImageOrientation();
 
             //Update Title

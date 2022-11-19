@@ -3,6 +3,7 @@ const destinationsArr = [
         name: 'moon',
         srcSet: 'image-moon.webp',
         imageSrc: 'image-moon.png',
+        alt: 'The moon',
         summary: 'See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.',
         distance: '384,000 km',
         travelTime: '3 days'
@@ -11,6 +12,7 @@ const destinationsArr = [
         name: 'mars',
         srcSet: 'image-mars.webp',
         imageSrc: 'image-mars.png',
+        alt: 'Mars',
         summary: 'Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!',
         distance: '225 mil. km',
         travelTime: '9 months'
@@ -19,6 +21,7 @@ const destinationsArr = [
         name: 'europa',
         srcSet: 'image-europa.webp',
         imageSrc: 'image-europa.png',
+        alt: 'Europa',
         summary: 'The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.',
         distance: '628 mil. km',
         travelTime: '3 years'
@@ -27,6 +30,7 @@ const destinationsArr = [
         name: 'titan',
         srcSet: 'image-titan.webp',
         imageSrc: 'image-titan.png',
+        alt: 'Titan',
         summary: 'The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.',
         distance: '1.6 bil. km',
         travelTime: '7 years'
@@ -57,13 +61,13 @@ destinationTabs.forEach(dest => {
 
             //Update Image
             const sourceSet = document.querySelector('.destination-image source');
-            console.log(sourceSet)
 
             const destinationImage = document.querySelector('.destination-image img');
 
             sourceSet.setAttribute('srcSet', `../images/destination/${destinationObject.srcSet}`);
 
             destinationImage.setAttribute('src', `../images/destination/${destinationObject.imageSrc}`);
+            destinationImage.setAttribute('alt', `${destinationObject.alt}`);
 
             //Update Title and Summary
             const destinationTitle = document.querySelector('.destination-info h2');
