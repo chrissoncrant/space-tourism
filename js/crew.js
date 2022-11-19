@@ -3,25 +3,29 @@ const crewArr = [
         position: 'commander',
         name: 'Douglas Hurley',
         description: 'Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.',
-        imageSrc: 'image-douglas-hurley.webp'
+        sourceSet: 'image-douglas-hurley.webp',
+        imageSrc: 'image-douglas-hurley.png'
     },
     {
         position: 'mission specialist',
         name: 'Mark Shuttleworth',
         description: 'Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist.',
-        imageSrc: 'image-mark-shuttleworth.webp'
+        sourceSet: 'image-mark-shuttleworth.webp',
+        imageSrc: 'image-mark-shuttleworth.png'
     },
     {
         position: 'pilot',
         name: 'Victor Glover',
         description: 'Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer.',
-        imageSrc: 'image-victor-glover.webp'
+        sourceSet: 'image-victor-glover.webp',
+        imageSrc: 'image-victor-glover.png'
     },
     {
         position: 'flight engineer',
         name: 'Anousheh Ansari',
         description: 'Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space.',
-        imageSrc: 'image-anousheh-ansari.webp'
+        sourceSet: 'image-anousheh-ansari.webp',
+        imageSrc: 'image-anousheh-ansari.png'
     },
 ];
 
@@ -47,7 +51,11 @@ let selectedDot = dotButtons[0];
             const crewObj = crewArr[button.value - 1];
 
             //Get and set image
+            const sourceSet = document.querySelector('.crew-page-section source');
+            
             const image = document.querySelector("[data-element='image']");
+
+            sourceSet.setAttribute('srcset', `../images/crew/${crewObj.sourceSet}`);
 
             image.setAttribute('src', `../images/crew/${crewObj.imageSrc}`);
 
