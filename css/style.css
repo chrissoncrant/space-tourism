@@ -140,6 +140,10 @@ p a {
     max-width: 45ch;
 }
 
+.destination-page-section.grid-container picture {
+    align-self: center;
+}
+
 .crew-page-section.grid-container {
     grid-template-areas: 
         'title'

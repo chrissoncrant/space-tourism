@@ -130,10 +130,15 @@ So I made a [calculator for clamp values](https://chrissoncrant.github.io/refere
 It's very basic as far as styling goes, but it is a functional minimum viable product. 
 
 ## Conclusions
+This project has been quite an educational experience. I learned a lot more than I could have anticipated. Before starting the project I had know idea how to do many of the things, I just knew that I could find out.
 
-I still have a lot of the tutorial left to watch. Looking back from the start I know I have learned a tremendous amount. Initially this project seemd quite challenging for the fact that I did not know how I would tackle things like the hamburger menu and the tab selectors. Now those things are no longer mysterious.
+This was part of the journey. Now that I am on this side of it I look back at all the "side quests" (the progressivley enhanced and accessible burger menu, custom elements, javascript classes, accessibilty and ARIA, how the picture and source elements work for web image optimization, the media query list API, and more) and marvel at how far I've come and what I have done.
 
-I believe there would be additional value in recreating this project from scratch, going just by my own instincts. I will probably do this soon.
+There is a bit of sadness at the end. I am left with that empty feeling of where to go now. I could jsut turn right around and do this same quest again, knowing that it may be the same theoretically, but because I am different, it would be a new quest experientially. 
+
+I know there are lots of things I could have done better, but there are also things I am proud of. For instance, the method I came up with for having adaptive focusability of the navigation menu. I learned about this concept through the burger menu side quest, but then implemented it in a whole new way. 
+
+In conclusion, I feel I have grown a lot as a developer. I am now more cognisant of accessibility and focusability and what it means to build using the mental model of progressive enhancement. I am more confident in my abilities to find the answer and to work through problems. And, overall, I am much more familiar with the overall workflow of taking a project from start to finish. 
 
 
 
